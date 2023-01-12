@@ -4,8 +4,10 @@ public class Solver
 {
     string strFalse = "false";
     string strTrue = "true";
-    byte minLetter = (byte)'A';
-    byte maxLetter = (byte)'z';
+    byte minSmall = (byte)'a';
+    byte maxSmall = (byte)'z';
+    byte minLarge = (byte)'A';
+    byte maxLarge = (byte)'Z';
     byte minNum = (byte)'0';
     byte maxNum = (byte)'9';
 
@@ -32,8 +34,14 @@ public class Solver
 
     public bool CheckLetter(char c)
     {
-        if(c <= maxLetter && c >= minLetter)
+        if(c <= maxLarge
+        && c >= minLarge)
             return true;
+
+        if(c <= maxSmall
+        && c >= minSmall)
+            return true;
+
         return false;
     }
 

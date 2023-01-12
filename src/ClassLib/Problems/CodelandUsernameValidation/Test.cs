@@ -76,8 +76,20 @@ public class Test
 
     public bool PutFirstCharNotAsLetter_ReturnFalse()
     {
-        string startNum = "12bad";
-    
-        return "false" == _solver.DO(startNum);
+        string[] strings =
+        {
+            "_ZsfdAfs",
+            "1adf__df132",
+            "%dfe__wb",
+            "0afpp_bA"
+        };
+
+        foreach(var str in strings)
+        {
+            if(_solver.DO(str) != _strFalse)
+                return false;
+        }
+
+        return true;
     }
 }
