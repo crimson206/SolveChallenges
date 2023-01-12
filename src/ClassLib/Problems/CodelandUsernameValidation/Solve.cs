@@ -13,7 +13,8 @@ public class Solver
 
     public string DO(string name)
     {
-        if(name.Length < 4 || name.Length > 25)
+        if(name.Length < 4
+        || name.Length > 25)
             return _strFalse;
 
         if(CheckLetter(name[0]) == false)
@@ -50,8 +51,10 @@ public class Solver
 
     public bool CheckNum(char c)
     {
-        if(c <= _maxNum && c >= _minNum)
+        if(c <= _maxNum
+        && c >= _minNum)
             return true;
+
         return false;
     }
 
@@ -59,6 +62,7 @@ public class Solver
     {
         if(c == '_')
             return true;
+
         return false;
     }
 }
