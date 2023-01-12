@@ -14,6 +14,26 @@ public class Test
         allTests.Add(PutFirstCharNotAsLetter_ReturnFalse);
         allTests.Add(PutPassableStrings_ReturnTrue);
         allTests.Add(PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse);
+        allTests.Add(PutLastCharAsUnderscore_ReturnFalse);
+    
+    }
+
+    public bool PutLastCharAsUnderscore_ReturnFalse()
+    {
+        string[] strings =
+        {
+            "asfdfs_",
+            "Bdf__df132_",
+            "dfe__w!b_"
+        };
+
+        foreach(var str in strings)
+        {
+            if(_solver.DO(str) != _strFalse)
+                return false;
+        }
+
+        return true;
     }
 
     public bool PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse()
