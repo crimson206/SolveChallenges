@@ -13,6 +13,9 @@ public class Solver
 
     public string DO(string name)
     {
+        if(name.Length < 4 || name.Length > 25)
+            return strFalse;
+
         if(CheckLetter(name[0]) == false)
             return strFalse;        
 
