@@ -14,6 +14,9 @@ public class Solver
         if(CheckLetter(name[0]) == false)
             return strFalse;        
 
+        if(CheckUnderscore(name[name.Length -1]) == true)
+            return strFalse;
+
         foreach(var c in name)
         {
             if(CheckLetter(c) == true
