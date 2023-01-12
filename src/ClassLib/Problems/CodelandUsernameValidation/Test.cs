@@ -13,20 +13,41 @@ public class Test
     {
         allTests.Add(PutFirstCharNotAsLetter_ReturnFalse);
         allTests.Add(PutPassableStrings_ReturnTrue);
+        allTests.Add(PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse);
     }
+
+    public bool PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse()
+    {
+        string[] strings =
+        {
+            "asfd§/fs",
+            "Bdf__d?f132",
+            "dfe__w!b"
+        };
+
+        foreach(var str in strings)
+        {
+            if(_solver.DO(str) != _strFalse)
+                return false;
+        }
+
+        return true;
+    }
+
 
     public bool PutPassableStrings_ReturnTrue()
     {
         string[] strings =
         {
-            "asfdsfs",
+            "ZsfdAfs",
             "adf__df132",
-            "dfe__wb"
+            "dfe__wb",
+            "afpp_bA"
         };
 
         foreach(var str in strings)
         {
-            if(_solver.DO(str) == _strFalse)
+            if(_solver.DO(str) != _strTrue)
                 return false;
         }
 
