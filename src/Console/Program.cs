@@ -18,8 +18,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine("TestName : " + testName);
                 Console.WriteLine("Result : " + result);
             }
-
-
         }
     }
 }
