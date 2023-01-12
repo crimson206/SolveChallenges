@@ -8,10 +8,10 @@ public class Test
 
     public Test()
     {
-        allTests.Add(NotPutFirstLetter_ReturnFalse);
+        allTests.Add(PutFirstCharNotAsLetter_ReturnFalse);
     }
 
-    public bool NotPutFirstLetter_ReturnFalse()
+    public bool PutFirstCharNotAsLetter_ReturnFalse()
     {
         Solve solve = new Solve();
         string startNum = "12bad";
