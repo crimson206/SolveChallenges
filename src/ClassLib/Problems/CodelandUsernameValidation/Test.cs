@@ -11,14 +11,14 @@ public class Test
 
     public Test()
     {
-        allTests.Add(PutFirstCharNotAsLetter_ReturnFalse);
-        allTests.Add(PutPassableStrings_ReturnTrue);
-        allTests.Add(PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse);
-        allTests.Add(PutLastCharAsUnderscore_ReturnFalse);
-        allTests.Add(PutNameWihtOutOfRange_ReturnFalse);    
+        allTests.Add(PutFirstCharNotAsLetter_ReturnFalse_1);
+        allTests.Add(PutPassableStrings_ReturnTrue_2);
+        allTests.Add(PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse_3);
+        allTests.Add(PutLastCharAsUnderscore_ReturnFalse_4);
+        allTests.Add(PutNameWihtOutOfRange_ReturnFalse_5);    
     }
 
-    public bool PutNameWihtOutOfRange_ReturnFalse()
+    public bool PutNameWihtOutOfRange_ReturnFalse_5()
     {
         string[] strings =
         {
@@ -36,7 +36,7 @@ public class Test
         return true;
     }
 
-    public bool PutLastCharAsUnderscore_ReturnFalse()
+    public bool PutLastCharAsUnderscore_ReturnFalse_4()
     {
         string[] strings =
         {
@@ -54,7 +54,7 @@ public class Test
         return true;
     }
 
-    public bool PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse()
+    public bool PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse_3()
     {
         string[] strings =
         {
@@ -73,7 +73,7 @@ public class Test
     }
 
 
-    public bool PutPassableStrings_ReturnTrue()
+    public bool PutPassableStrings_ReturnTrue_2()
     {
         string[] strings =
         {
@@ -92,7 +92,7 @@ public class Test
         return true;
     }
 
-    public bool PutFirstCharNotAsLetter_ReturnFalse()
+    public bool PutFirstCharNotAsLetter_ReturnFalse_1()
     {
         string[] strings =
         {
