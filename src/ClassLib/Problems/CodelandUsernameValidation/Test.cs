@@ -15,7 +15,25 @@ public class Test
         allTests.Add(PutPassableStrings_ReturnTrue);
         allTests.Add(PutMiddleSomeCharNotAsLetterNorNumNorUnderscore_ReturnFalse);
         allTests.Add(PutLastCharAsUnderscore_ReturnFalse);
-    
+        allTests.Add(PutNameWihtOutOfRange_ReturnFalse);    
+    }
+
+    public bool PutNameWihtOutOfRange_ReturnFalse()
+    {
+        string[] strings =
+        {
+            "as_",
+            "Bdfawerafadfdafadfdsafaddaf__df132_",
+            ""
+        };
+
+        foreach(var str in strings)
+        {
+            if(_solver.DO(str) != _strFalse)
+                return false;
+        }
+
+        return true;
     }
 
     public bool PutLastCharAsUnderscore_ReturnFalse()
