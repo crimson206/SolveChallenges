@@ -1,6 +1,6 @@
 namespace CodelandUsernameValidation;
 
-public class Solve
+public class Solver
 {
     string strFalse = "false";
     string strTrue = "true";
