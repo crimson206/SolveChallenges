@@ -36,7 +36,7 @@ public class Solver
         return _strTrue;
     }
 
-    public bool CheckLetter(char c)
+    private bool CheckLetter(char c)
     {
         if(c <= _maxLarge
         && c >= _minLarge)
@@ -49,7 +49,7 @@ public class Solver
         return false;
     }
 
-    public bool CheckNum(char c)
+    private bool CheckNum(char c)
     {
         if(c <= _maxNum
         && c >= _minNum)
