@@ -2,25 +2,25 @@ namespace CodelandUsernameValidation;
 
 public class Solver
 {
-    string strFalse = "false";
-    string strTrue = "true";
-    byte minSmall = (byte)'a';
-    byte maxSmall = (byte)'z';
-    byte minLarge = (byte)'A';
-    byte maxLarge = (byte)'Z';
-    byte minNum = (byte)'0';
-    byte maxNum = (byte)'9';
+    string _strFalse = "false";
+    string _strTrue = "true";
+    byte _minSmall = (byte)'a';
+    byte _maxSmall = (byte)'z';
+    byte _minLarge = (byte)'A';
+    byte _maxLarge = (byte)'Z';
+    byte _minNum = (byte)'0';
+    byte _maxNum = (byte)'9';
 
     public string DO(string name)
     {
         if(name.Length < 4 || name.Length > 25)
-            return strFalse;
+            return _strFalse;
 
         if(CheckLetter(name[0]) == false)
-            return strFalse;        
+            return _strFalse;        
 
         if(CheckUnderscore(name[name.Length -1]) == true)
-            return strFalse;
+            return _strFalse;
 
         foreach(var c in name)
         {
@@ -29,20 +29,20 @@ public class Solver
             || CheckUnderscore(c) == true)
                 continue;
             else
-                return strFalse;
+                return _strFalse;
         }
 
-        return strTrue;
+        return _strTrue;
     }
 
     public bool CheckLetter(char c)
     {
-        if(c <= maxLarge
-        && c >= minLarge)
+        if(c <= _maxLarge
+        && c >= _minLarge)
             return true;
 
-        if(c <= maxSmall
-        && c >= minSmall)
+        if(c <= _maxSmall
+        && c >= _minSmall)
             return true;
 
         return false;
@@ -50,7 +50,7 @@ public class Solver
 
     public bool CheckNum(char c)
     {
-        if(c <= maxNum && c >= minNum)
+        if(c <= _maxNum && c >= _minNum)
             return true;
         return false;
     }
@@ -61,6 +61,4 @@ public class Solver
             return true;
         return false;
     }
-
 }
-
