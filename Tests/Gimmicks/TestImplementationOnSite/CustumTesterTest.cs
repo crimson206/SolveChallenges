@@ -49,8 +49,8 @@ public class UnitTest1
         customTester.RegisterTest(class1.FromStrIntToInt, testSets.StrIntInputs_L2, testSets.IntResults_L2);
         customTester.RegisterTest(class1.FromStrsIntsToInt, testSets.StrsIntsInputs_L2, testSets.IntResults_L2);
 
-        string expected = "ClassName : Class1, MethodName : FromStrIntToInt\n";
-        expected = "ClassName : Class1, MethodName : FromStrsIntsToInt";
+        string expected = "ClassInfo : Tests.Class1, MethodInfo : Int32 FromStrIntToInt(System.String, Int32)\n";
+        expected += "ClassInfo : Tests.Class1, MethodInfo : Int32 FromStrsIntsToInt(System.String[], Int32[])\n";
         string result = customTester.ReadTests();
 
         Assert.AreEqual(expected, result);
@@ -64,6 +64,5 @@ public class UnitTest1
         /// ReadRegisteredMothodsInfo
         /// DoAllTest_ReturnTestResult_IncludingBoolValueClassNameMethodName
         /// DoATest_ReturnTestResult_IncludingBoolValueClassNameMethodName
-        /// 
     }
 }
