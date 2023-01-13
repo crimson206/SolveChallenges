@@ -19,10 +19,13 @@ public class CustomTester
 
         foreach(var test in _tests)
         {
-            testsInfo += "ClassInfo : " + test.Target;
+            
+            testsInfo += "ClassInfo : " + test.Method.DeclaringType;
             testsInfo += ", MethodInfo : " + test.Method + "\n";
         }
 
         return testsInfo;
     }
+
+
 }
