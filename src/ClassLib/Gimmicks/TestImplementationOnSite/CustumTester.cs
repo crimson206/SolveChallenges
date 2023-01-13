@@ -9,11 +9,15 @@ public class CustomTester
 
     public CustomTester(Delegate method, object[][] inputs, object[] expectedResults)
     {
-
         _testName = "Test" + method.Method.Name;
         _method = method;
         _inputs = inputs;
         _expectedResults = expectedResults;
+    }
+
+    public string Do()
+    {
+        return "error";
     }
 
     public string TestName {get => _testName;}
@@ -27,4 +31,5 @@ public class CustomTester
 
         return testsInfo;
     }
+
 }

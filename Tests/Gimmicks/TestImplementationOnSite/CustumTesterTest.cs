@@ -52,14 +52,13 @@ public class UnitTest1
 {
 
     [TestMethod]
-    public void InitializeWithWrongArgs_ThrowException_1()
+    public void DoWithWrongArgs_ThrowException_1()
     {
-
-        Assert.ThrowsException<Exception>(() => new CustomTester(Class1.FromStrIntToInt, TestSets.StrIntInputs_L2, TestSets.StrResults_L2));
-        Assert.ThrowsException<Exception>(() => new CustomTester(Class1.FromStrIntToInt, TestSets.StrsIntsInputs_L2, TestSets.IntResults_L2));
-        
+        CustomTester test1 = new CustomTester(Class1.FromStrIntToInt, TestSets.StrIntInputs_L2, TestSets.IntResults_L2);
+        CustomTester test2 = new CustomTester(Class1.FromStrIntToInt, TestSets.StrIntInputs_L2, TestSets.IntResults_L2);
+        Assert.ThrowsException<Exception>(() => test1.Do());
+        Assert.ThrowsException<Exception>(() => test2.Do());
     }
-
 
     [TestMethod]
     public void PlannedUnittests()
