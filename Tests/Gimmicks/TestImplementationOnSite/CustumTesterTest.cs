@@ -51,7 +51,7 @@ public static class TestSets
 public class UnitTest1
 {
     [TestMethod]
-    public void RegisterMethodWithInputsAndExpectedResults_ReadRegisteredMothodsInfo()
+    public void RegisterMethodWithInputsAndExpectedResults_ReadRegisteredMothodsInfo_1()
     {
         CustomTester customTester = new CustomTester();
 
@@ -64,17 +64,15 @@ public class UnitTest1
         Assert.AreEqual(expected, result);
     }
 
-    [DataRow()]
-    [DataRow()]
-    [DataRow()]
+
     [DataTestMethod]
-    public void RegisterFunctionWithWrongArgs_ThrowError()
+    public void RegisterFunctionWithWrongArgs_ThrowError_2()
     {
         CustomTester customTester = new CustomTester();
 
         customTester.RegisterTest(Class1.FromStrIntToInt, TestSets.StrsIntsInputs_L2, TestSets.IntResults_L2);
         Assert.ThrowsException<Exception>(() => customTester.RegisterTest(Class1.FromStrIntToInt, TestSets.StrsIntsInputs_L2, TestSets.IntResults_L2));
-
+        Assert.ThrowsException<Exception>(() => customTester.RegisterTest(Class1.FromStrIntToInt, TestSets.StrIntInputs_L2, TestSets.StrResults_L2));
     }
 
     [TestMethod]
