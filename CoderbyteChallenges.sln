@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "src\Console\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "src\ClassLib\ClassLib.csproj", "{D5347FCE-EB23-4B87-B300-39EBD3BCFEF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{93BFC9FF-5E5A-46BE-B516-00A0B471C2FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{D5347FCE-EB23-4B87-B300-39EBD3BCFEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5347FCE-EB23-4B87-B300-39EBD3BCFEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5347FCE-EB23-4B87-B300-39EBD3BCFEF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BFC9FF-5E5A-46BE-B516-00A0B471C2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BFC9FF-5E5A-46BE-B516-00A0B471C2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BFC9FF-5E5A-46BE-B516-00A0B471C2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BFC9FF-5E5A-46BE-B516-00A0B471C2FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ACAC6B3B-D77F-4077-91F6-15D599848C71} = {3823A612-F5DD-4A8A-82E7-119A77B0330E}
